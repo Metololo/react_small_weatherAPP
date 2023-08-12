@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
     font-family: 'Manrope', 'Sans-seriff';
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -12,6 +15,13 @@ body {
     background-image: url('./images/background.jpg');
 }
 
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ 
 .search--bar {
     display: flex;
     width: 340px;
@@ -49,8 +59,8 @@ body {
 #input--city {
     background: none;
     border: none;
-    color: white;
     font-size: 16px;
+    font-weight: 700;
 }
 
 #input--city:focus {
@@ -60,5 +70,43 @@ body {
 #input--city::placeholder {
     color: white;
     opacity: 0.7;
-    font-weight: 500;
+    font-weight: 700;
+}
+
+#weather--card{
+    width: 340px;
+    margin-top: 24px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.weather--logo {
+    width: 200px;
+}
+
+.temparature {
+    font-size: calc(8*8px);
+}
+
+.infos--container {
+    display: flex;
+    width: 100%;
+    margin-top: 16px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.infos {
+    display: flex;
+    font-size: 16px;
 }
