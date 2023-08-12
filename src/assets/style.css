@@ -1,7 +1,64 @@
 * {
     box-sizing: border-box;
+    font-family: 'Manrope', 'Sans-seriff';
 }
 
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./images/background.jpg');
+}
+
+.search--bar {
+    display: flex;
+    width: 340px;
+    padding: 16px 8px;
+    border: 1px solid green;
+    align-items: center;
+    justify-content: space-between;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.search--bar div:first-of-type {
+    display: flex;
+    align-items: center;
+}
+.search--bar img:first-of-type {
+   margin-right: 8px;
+}
+
+.search--bar img {
+    width: 24px;
+}
+
+.search--btn {
+    border: none;
+    border-radius: 4px;
+    background: none;
+}
+ 
+#input--city {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+#input--city:focus {
+    outline: none;
+}
+
+#input--city::placeholder {
+    color: white;
+    opacity: 0.7;
+    font-weight: 500;
 }
